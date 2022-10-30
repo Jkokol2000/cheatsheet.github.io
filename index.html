@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        CSS Box Model Cheatsheet
+    </title>
+    <link rel="stylesheet" href="styles.css"
+</head>
+<body>
+    <h1>CSS Box Model Cheatsheet</h1>
+    <h2>Box Model Layers</h2>
+
+    <table>
+        <thead>
+            <tr>
+            <td>Layer</td>
+            <td>Indicator</td>
+            <td>Explanation</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Margin</td>
+                <td><image src="margin.png"></image></td>
+                <td>The cleared area outside the Border of the element. Completely transparent, and used to space elements from each other.</td>
+            </tr>
+            <tr>
+                <td>Border</td>
+                <td><image src="border.png"></image></td>
+                <td>A line or styled line that goes around the Padding and Content. Used to make elements more concise and focused.</td>
+            </tr>
+            <tr>
+                <td>Padding</td>
+                <td><image src="padding.png"></image></td>
+                <td>The cleared area around the Content, while still being within the Border. Used to give space between the Border and other elements without needing to change Margins.</td>
+            </tr>
+            <tr>
+                <td>Content</td>
+                <td><image src="content.png"></image></td>
+                <td>The actual Content of the box, where the text and images of the element appear.</td>
+            </tr>
+        </tbody>   
+        <tfoot>
+            <td colspan="3">Note: The total width and total height of an element changes based on the element's box. Make sure to add the left/right border, padding, and margin sizes when calculating the element's width, and top/bottom border, padding, and margin sizes for the element's height.</td>
+            
+        </tfoot> 
+    </table>
+    <h2>Box Model CSS Example Code</h2>
+    <table>
+        <thead>
+            <tr>
+                <td>Layer</td>
+                <td colspan="4">Examples</td>
+                <td>Notes</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Margin</td>
+                <td class="codescript"><span class="bluecode codescript">margin</span>: <span class="greencode codescript">10px 5px 15px 20px</span>;</td>
+                <td class="codescript"><span class="bluecode codescript">margin</span>: <span class="greencode codescript">10px 5px 15px</span>;</td>
+                <td class="codescript"><span class="bluecode codescript">margin</span>: <span class="greencode codescript">10px 5px</span>;</td>
+                <td class="codescript"><span class="bluecode codescript">margin</span>: <span class="greencode codescript">10px</span>;</td>
+                <td><ul>
+                    <li> If there are four elements, the spacing goes clockwise from the top margin (top, right, bottom, left).</li>
+                    <li> If there are three elements, the first input is the top margin, followed by both the right and left margins, and then the bottom margin.</li>
+                    <li> If there are two elements, the top and bottom margins are the first input, and the left and right margins are the second input.</li>
+                    <li> If there is only one element, then all four margins share the input.</li>
+                    <li> Margin by itself is the shorthand version, you can adjust the individual ones by using margin-top, margin-right, margin-bottom, and margin-left.</li>
+                </ul></td>
+            </tr>
+            <tr>
+                <td>Border</td>
+                <td colspan="4"class="codescript"><span class="bluecode codescript">border</span>: <span class="greencode codescript">5px</span><span class="redcode codescript"> solid red</span>;</td>
+                <td><ul>
+                    <li>The first element represents the thickness of the border.</li>
+                    <li>The second element represents the type of border used. Other examples are: dotted, dashed, double, and hidden. </li>
+                    <li>The third element represents the color of the border.</li>
+                </ul></td>
+            </tr>
+            <tr>
+                <td>Padding</td>
+                <td class="codescript"><span class="bluecode codescript">padding</span>: <span class="greencode codescript">10px 5px 15px 20px</span>;</td>
+                <td class="codescript"><span class="bluecode codescript">padding</span>: <span class="greencode codescript">10px 5px 15px</span>;</td>
+                <td class="codescript"><span class="bluecode codescript">padding</span>: <span class="greencode codescript">10px 5px</span>;</td>
+                <td class="codescript"><span class="bluecode codescript">padding</span>: <span class="greencode codescript">10px</span>;</td>
+                <td>The order and properties of the shorthand Padding property is the same as Margin. The individual properties are padding-top, padding-right, padding-bottom, and padding-left.</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
